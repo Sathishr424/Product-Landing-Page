@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+      #header{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 98%;
+        height: 110px;
+        vertical-align: middle;
+      }#nav-bar{
+        margin-right: 10px;
+        user-select: none;
+        vertical-align: middle;
+      }
+      #nav-links{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }#middle{
+        width: 90%;
+        position: absolute;
+        left:50%;
+        transform: translate(-50%,0%);
+      }.shadow{
+        box-shadow: 1px 1px 10px 2px #224b4b;
+      }.button:hover{
+        cursor: pointer;
+        opacity: 0.8;
+      }h3{
+        text-decoration: underline;
+      }a{color: white}
+      a:hover{color: white;}
+      #nav-alter{
+        display: none;
+        position: relative;
+      }#nav-content{
+        display: none;
+        position: absolute;
+        z-index: -1;
+      }#nav-alter:hover #nav-content{
+        display: block;
+      }@media (max-width:  600px){
+        #nav-alter{
+          display: inline-block;
+        }#nav-links{
+          display: none;
+        }
+      }.nav-link{
+      }
+    </style>
+
+  </head>
+  <body style='background-color: floralwhite;'>
+    
+    <div class='mb-4'>
+      <div id='header' class='mx-2 mr-4 bg-dark rounded-bottom text-white shadow' style='z-index: 4;'>
+        <div class='m-2' style='float: left;' id='header-image'><img id='header-img' width="120" height="90" src="https://www.pernod-ricard.com/themes/custom/pr2021_front/assets/images/logo.svg"></div>
+        <nav id='nav-bar' class='align-middle p-5' style="float: right;">
+          <div id='nav-links'>
+            <a class='nav-link button' href="#middle">Info</a>
+            <a class='nav-link button' href="#video">Preview</a>
+            <a class='nav-link button' href="#vision">Vision</a>
+          </div>
+
+          <div id='nav-alter' style="float: right;">
+            <div id='nav-btn' class="btn-info p-2">
+              Navigation
+            </div>
+            <div id='nav-content' styel='display:none' class="dropdown-menu">
+              <a class='nav-link button dropdown-item' href="#middle">Info</a>
+              <a class='nav-link button dropdown-item' href="#video">Preview</a>
+              <a class='nav-link button dropdown-item' href="#vision">Vision</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div id='middle' class='bg-dark text-white shadow rounded' style="position: absolute; top:120px; display:flex; align-items:center; flex-direction: column;">
+      <div style='width:80%; display: flex; flex-direction: column; align-items: center;'>
+        <div id='product-details' class='my-2'>
+          <h3 id="we-are-créateurs-de-convivialité">We are "créateurs de convivialité"</h3> <p>Our ambition is to turn every social interaction into a genuine and friendly experience of sharing. As we create and share our Pernod Ricard products we become immersed in this extraordinary human experience of convivialité.</p> <p>We are respectful and responsible hosts, committed to nurturing every terroir and its biodiversity. </p> <p>Our people add a human touch to our products with their own personality and passion. Our beverages travel the world because, although they are born in different lands and cultures, they are made to be shared. </p>
+        </div>
+        <div class='my-4'>
+          <iframe  id='video' width="560" height="315" src="https://www.youtube.com/embed/GcQFQViclYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id='vision'>
+          <h3 id="our-vision">Our vision</h3> <p>We are unlocking the magic of human connection to grow our business, transform our industry, and make a positive impact on the world. We do this by creating convivialitié. Our ambition is to turn every social interaction into a genuine and friendly experience of sharing.</p> <p>Convivialitié is the glue that binds us together, it allows us to meet our innate human need of connecting with one another. Convivialitié is the force beyond us, one that carries us, an energy that brings us closer together.</p> <p>We crave convivialitié because it is inherent to humanity and a true source of joy. When we are open to meeting people as our most authentic selves and we share convivial moments, our lives become so much brighter and more vibrant!</p> <p>In those moments we become convivialists – a role each and every one of us should embrace.</p>
+        </div>
+        <div class='my-2 p-2 shadow rounded' style="background-color: #212529; width:60%; text-align:center;">
+          <span class='py-2'>Enter your mail for getting product updates</span>
+          <form id='form' style='text-align: center;' action="https://www.freecodecamp.com/email-submit">
+            <input style='width:80%' name='email' class='m-2' style='display: inline-block;' type="email" id='email' placeholder="Enter your email" required><br>
+            <input class='m-2' style='display: inline-block;' type="submit" id='submit' name='submit'>
+          </form>
+        </div>
+      </div>
+      <div id='footer' class='m-4' style='display: flex; flex-direction: row; width: 100%; justify-content: space-evenly;'>
+        <div style='float: left;'>© Pernod Ricard 2021. All rights reserved.</div>
+        <div style="float:right; display: flex; flex-direction:row;">
+        <div class="mx-2 button">Privacy policy</div>
+        <div class="mx-2 button">Terms and conditions</div>
+        <div class="mx-2 button">Cookies notice</div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/prism.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
